@@ -48,6 +48,7 @@ function Form() {
     }
     return (
         <>
+        <h3 className='title'>Form</h3>
         <div className='formData'>
             <div className='formNames'>
                 <div className='errorFielde'>

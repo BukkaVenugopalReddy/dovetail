@@ -45,6 +45,7 @@
 .errorText{
     margin-top: -15px;
     margin: 0px;
+    color: red;
 }
 .formResult{
     margin-top:50px;
@@ -86,4 +87,11 @@
 }
 .tempResult{
     margin-top: 50px;
+}
+.title{
+    text-align: center;
+}
+.links{
+    display: flex;
+    
 }

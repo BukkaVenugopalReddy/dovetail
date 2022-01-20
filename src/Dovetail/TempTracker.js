@@ -7,9 +7,11 @@ function TempTracker() {
     const [temparature, setTemparature] = useState("")
     const [meanData, setMeanData] = useState("")
     const [modeValue, setModeValue] = useState("")
+    const [conditions,setConditions]=useState(false)
 
 
     const handleSubmit = () => {
+        if(temparature>0&&temparature<=150){
         if (temparature) {
             array.push(temparature)
         }
@@ -47,15 +49,24 @@ function TempTracker() {
             }
             setModeValue(max)
         }
+    }else{
+       
+        setConditions(true)
+        setTimeout(()=>{
+            setConditions(false)
+        },2000)
+    }
     }
 
 
 
     return (
         <>
+        <h3 className='title'>Temp Tracker</h3>
         <div className='tempTracker'>
             <div>
                 <input className='inputFields' type="number" placeholder='Type Here' value={temparature} onChange={(e) => { setTemparature(e.target.value) }} />
+                {conditions&&<p className='errorText'> Temparature range between 0 to 150</p>}
                 <button className='resultButton' onClick={handleSubmit}>SUBMIT</button>
             </div>
             {array.length > 0 &&
@@ -67,7 +78,7 @@ function TempTracker() {
                 </div>
             }
         </div>
-        <div>
+        <div className='links'>
         <button ><a href='/'>Form</a></button>
         <button><a href='/anagram'>Anagram</a></button>
         <button><a href='/temptracker'>Temp Tracker</a></button>
