@@ -41,9 +41,9 @@ function Anagram() {
             <div className='anagram'>
                 <div className='fields'>
                     <input className='inputFields' type="text" placeholder='Enter first Word' value={firstName} onChange={(e) => setFirstName(e.target.value)} />
-                    {errorFirstName && <p className='errorText'>Please Enter the FirstName</p>}
+                    {errorFirstName && <p className='errorText'>Please Enter the firstword</p>}
                     <input className='inputFields' type="text" placeholder='Enter Second Word' value={lastName} onChange={(e) => setLastName(e.target.value)} />
-                    {errorLastName && <p className='errorText'>Please enter the Last Name</p>}
+                    {errorLastName && <p className='errorText'>Please enter the Second word</p>}
                 </div>
                 <div>
                     <button className='resultButton' onClick={handleResult}>Result</button>
