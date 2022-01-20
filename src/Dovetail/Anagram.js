@@ -20,9 +20,16 @@ function Anagram() {
                         object.lastName = lastName
                         if (firstName.toLowerCase().split("").sort().join("") === lastName.toLowerCase().split("").sort().join("")) {
                             setResult(true)
+                            setTimeout(()=>{
+                                setResult("")
+                            },2000)
+
                         }
                     }
                     setResultButton(object)
+                    setTimeout(()=>{
+                        setResultButton("")
+                    },2000)
                     setFirstName("")
                     setLastName("")
                 } else {
@@ -65,7 +72,7 @@ function Anagram() {
                 {resultButton &&
                     <div className='resultStatus'>
                         <h1 className='resultText'>{resultButton.firstName ? resultButton.firstName : ""},{resultButton.lastName ? resultButton.lastName : ""}</h1>
-                        {resultButton.firstName && resultButton.lastName && <h1> {" " + "Returns"} {result === true ? "True" : "Fasle"}</h1>}
+                         <h1> Returns {result === true ? "True" : "Fasle"}</h1>
                     </div>}
             </div>
             <div>

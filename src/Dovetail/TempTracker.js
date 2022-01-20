@@ -8,6 +8,7 @@ function TempTracker() {
     const [meanData, setMeanData] = useState("")
     const [modeValue, setModeValue] = useState("")
     const [conditions,setConditions]=useState(false)
+    const [allData,setAllData]=useState("")
 
 
     const handleSubmit = () => {
@@ -48,6 +49,7 @@ function TempTracker() {
 
             }
             setModeValue(max)
+
         }
     }else{
        
@@ -56,6 +58,7 @@ function TempTracker() {
             setConditions(false)
         },2000)
     }
+    setAllData(array,...array)
     }
 
 
@@ -71,6 +74,7 @@ function TempTracker() {
             </div>
             {array.length > 0 &&
                 <div className='tempResult'>
+                    {/* <h3>{allData}</h3> */}
                     <h3>Max Temparature : {parseInt(Math.max(...array)) ? parseInt(Math.max(...array)) : 0}</h3>
                     <h3>Min Temparature : {parseInt(Math.min(...array)) ? Math.min(...array) : 0}</h3>
                     <h3>Mean of all range Temparatures : {meanData ? meanData : 0}</h3>
