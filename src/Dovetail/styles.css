@@ -1,0 +1,89 @@
+.formData{
+    height: 250px;
+    width: 600px;
+    border: 2px solid gray;
+    text-align: center;
+    margin: 30px auto;
+    
+}
+.formNames{
+    display: flex;
+    margin-left: 50px;
+    padding: 10px;
+
+}
+.inputFields{
+    padding: 10px;
+    margin-right: 10px;
+    height: 20px;
+    width: 200px;
+    border: 2px solid gray;
+    border-radius: 5px;
+    font-size: 15px;
+}
+.formSelect{
+    margin: 10px;
+    height: 30px;
+    width: 70px;
+    border: 2px solid gray;
+    border-radius: 5px;
+    font-size: 15px;
+
+}
+.formCodes{
+    margin-top: 10px;
+  margin: 10px;  
+}
+.formButton{
+    height: 40px;
+    margin-top: 20px;
+    width: 100px;
+    border: 2px solid gray;
+    border-radius: 5px;
+    font-size: 15px;
+}
+.errorText{
+    margin-top: -15px;
+    margin: 0px;
+}
+.formResult{
+    margin-top:50px;
+}
+.anagram{
+    padding: 10px;
+    width: 700px;
+    margin: 30px auto;
+    height: 150px;
+    text-align: center;
+    border: 2px solid gray;
+}
+.resultButton{
+    height: 40px;
+    margin-top: 20px;
+    width: 100px;
+    border: 2px solid gray;
+    border-radius: 5px;
+    font-size: 15px;
+}
+.resultStatus{
+    display: flex;
+    text-align: center;
+    margin-top: 50px;
+    margin-left: 140px;
+    
+}
+.resultText{
+    margin-right: 10px;
+
+}
+.tempTracker{
+    padding: 10px;
+    width: 700px;
+    margin: 30px auto;
+    height: 100px;
+    text-align: center;
+    border: 2px solid gray;  
+}
+.tempResult{
+    margin-top: 50px;
+}
