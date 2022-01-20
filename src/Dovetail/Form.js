@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import countryListAllIsoData from './CountryCodes';
+import HeaderTitle from './HeaderTitle';
+import Links from './Links';
 import "./styles.css"
 
 function Form() {
@@ -33,16 +35,16 @@ function Form() {
     }
     return (
         <>
-            <h3 className='title'>Form</h3>
+          <HeaderTitle title={"Form"}/>
             <div className='formData'>
                 <div className='formNames'>
                     <div className='errorFielde'>
                         <input className='inputFields' type="text" placeholder='First Name' value={firstName} onChange={(e) => { setFirstName(e.target.value) }} />
-                        {errorFirstName ||submitButton?.firstName?.length<5? <p className='errorText'>Please Enter the Firs tName min 5 letters</p>:""}
+                        {errorFirstName ||submitButton?.firstName?.length<5? <p className='errorText'> Firstname with min 5 letters</p>:""}
                     </div>
                     <div className='errorFielde'>
                         <input className='inputFields' type="text" placeholder='Last Name' value={lastName} onChange={(e) => { setLastName(e.target.value) }} />
-                        {errorLastName ||submitButton?.lastName?.length<5? <p className='errorText'>Please enter the Last Name min 5 letters</p>:""}
+                        {errorLastName ||submitButton?.lastName?.length<5? <p className='errorText'> Lastname min 5 letters</p>:""}
                     </div>
                 </div>
                 <div className='formCodes'>
@@ -73,11 +75,7 @@ function Form() {
                     <h3>Mobile Number :{submitButton.countryCode + " " + submitButton.mobileNumber}</h3>
                 </div>:""}
             </div>
-            <div>
-                <button ><a href='/'>Form</a></button>
-                <button><a href='/anagram'>Anagram</a></button>
-                <button><a href='/temptracker'>Temp Tracker</a></button>
-            </div>
+          <Links/>
         </>
     )
 }

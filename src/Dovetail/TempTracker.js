@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import HeaderTitle from './HeaderTitle';
+import Links from './Links';
 
 var array = []
 
@@ -8,7 +10,6 @@ function TempTracker() {
     const [meanData, setMeanData] = useState("")
     const [modeValue, setModeValue] = useState("")
     const [conditions,setConditions]=useState(false)
-    const [allData,setAllData]=useState("")
 
 
     const handleSubmit = () => {
@@ -48,24 +49,20 @@ function TempTracker() {
                 }
 
             }
-            setModeValue(max)
-
-        }
+            setModeValue(max)}
     }else{
-       
         setConditions(true)
         setTimeout(()=>{
             setConditions(false)
         },2000)
     }
-    setAllData(array,...array)
     }
 
 
 
     return (
         <>
-        <h3 className='title'>Temp Tracker</h3>
+       <HeaderTitle title={"Temp Tracker"}/>
         <div className='tempTracker'>
             <div>
                 <input className='inputFields' type="number" placeholder='Type Here' value={temparature} onChange={(e) => { setTemparature(e.target.value) }} />
@@ -74,19 +71,15 @@ function TempTracker() {
             </div>
             {array.length > 0 &&
                 <div className='tempResult'>
-                    {/* <h3>{allData}</h3> */}
-                    <h3>Max Temparature : {parseInt(Math.max(...array)) ? parseInt(Math.max(...array)) : 0}</h3>
-                    <h3>Min Temparature : {parseInt(Math.min(...array)) ? Math.min(...array) : 0}</h3>
-                    <h3>Mean of all range Temparatures : {meanData ? meanData : 0}</h3>
-                    <h3>Mode of all the temparatures :{modeValue ? modeValue : 0}</h3>
+                    {/* <h4>{allData}</h4> */}
+                    <h4>Max Temparature : {parseInt(Math.max(...array)) ? parseInt(Math.max(...array)) : 0}</h4>
+                    <h4>Min Temparature : {parseInt(Math.min(...array)) ? Math.min(...array) : 0}</h4>
+                    <h4>Mean of all range Temparatures : {meanData ? meanData : 0}</h4>
+                    <h4>Mode of all the temparatures :{modeValue ? modeValue : 0}</h4>
                 </div>
             }
         </div>
-        <div className='links'>
-        <button ><a href='/'>Form</a></button>
-        <button><a href='/anagram'>Anagram</a></button>
-        <button><a href='/temptracker'>Temp Tracker</a></button>
-    </div>
+      <Links/>
     </>
     );
 }

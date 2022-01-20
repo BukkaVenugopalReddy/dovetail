@@ -4,7 +4,8 @@
     border: 2px solid gray;
     text-align: center;
     margin: 30px auto;
-    
+    border-radius: 10px;
+    /* background-color: rgb(117, 144, 156); */
 }
 .formNames{
     display: flex;
@@ -24,10 +25,11 @@
 .formSelect{
     margin: 10px;
     height: 30px;
-    width: 70px;
+    width: 90px;
     border: 2px solid gray;
     border-radius: 5px;
     font-size: 15px;
+    background-color: rgb(167, 180, 176);
 
 }
 .formCodes{
@@ -35,12 +37,17 @@
   margin: 10px;  
 }
 .formButton{
-    height: 40px;
+    height: 35px;
     margin-top: 20px;
-    width: 100px;
-    border: 2px solid gray;
+    width: 200px;
+    border: 2px solid rgb(106, 187, 207);
     border-radius: 5px;
     font-size: 15px;
+    background-color: rgb(94, 162, 231);
+}
+.formButton:hover{
+    cursor: pointer;
+    background-color: limegreen;
 }
 .errorText{
     margin-top: -15px;
@@ -48,7 +55,10 @@
     color: red;
 }
 .formResult{
-    margin-top:50px;
+    margin-top:70px;
+    background-color: mediumturquoise;
+    border-radius: 5px;
+    border: 2px solid green;
 }
 .anagram{
     padding: 10px;
@@ -57,6 +67,7 @@
     height: 150px;
     text-align: center;
     border: 2px solid gray;
+    border-radius: 5px;
 }
 .resultButton{
     height: 40px;
@@ -84,12 +95,21 @@
     height: 100px;
     text-align: center;
     border: 2px solid gray;  
+    border-radius: 5px;
+
 }
 .tempResult{
     margin-top: 50px;
 }
 .title{
     text-align: center;
+    padding: 10px;
+    background-color: lightgreen;
+    width: auto;
+    height: 50px;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 30px;
 }
 .links{
     display: flex;
