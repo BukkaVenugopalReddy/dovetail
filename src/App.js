@@ -8,7 +8,6 @@ import FirstForm from './AA/FirstForm';
 import SecondForm from './AA/SecondForm';
 import ResultForm from './AA/ResultForm';
 import React from 'react';
-import { historyData } from './AA/history';
 import { StateProvider } from './AA/Context';
 
 

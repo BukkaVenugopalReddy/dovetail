@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import { useCount } from './Context';
 
-function FirstForm(props) {
+function FirstForm() {
 
 
     let navigate = useNavigate()
@@ -12,7 +12,7 @@ function FirstForm(props) {
     const { dispatch } = useCount()
     const { state } = useCount()
 
-    const handleNext = (props) => {
+    const handleNext = () => {
         if (firstName !== "" && lastName !== "") {
             dispatch({ type: 'firstName', payload: firstName })
             dispatch({ type: 'lastName', payload: lastName })
@@ -24,8 +24,8 @@ function FirstForm(props) {
     return (
         <div>
             <div>
-                <input type="text" className='input_field' name="firstName" placeholder='First name' value={firstName} onChange={(e) => setFirstName(e.target.value)} />
-                <input type="text" className='input_field' name="lastName" placeholder='Last name' value={lastName} onChange={(e) => setLastName(e.target.value)} />
+                <input type="text" className='input_field'  placeholder='First name' value={firstName} onChange={(e) => setFirstName(e.target.value)} />
+                <input type="text" className='input_field'  placeholder='Last name' value={lastName} onChange={(e) => setLastName(e.target.value)} />
             </div>
             <div>
                 <button onClick={handleNext}>NEXT</button>

@@ -2,17 +2,16 @@ import React, { useState } from 'react';
 
 function Data() {
 
+    const [firstName, setFirstName] = useState("")
+    const [lastName, setLastName] = useState("")
+
     const handleSubmit=()=>{
         let obj={}
         if(firstName!==""){
             
         }
     }
-
     
-
-    const [firstName, setFirstName] = useState("")
-    const [lastName, setLastName] = useState("")
     return (
         <>
         <div>
